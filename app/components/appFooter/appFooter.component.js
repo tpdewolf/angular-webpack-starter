@@ -7,7 +7,7 @@ let component = {
 	controller: function() {
 		"ngInject"
 
-		
+		var vm = this;
 		
 	}
 };
