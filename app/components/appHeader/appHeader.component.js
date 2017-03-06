@@ -1,7 +1,7 @@
 import template from './appHeader.html';
 import './appHeader.scss';
 
-let component = {
+const component = {
 	bindings: {},
 	template: template,
 	controller: function() {

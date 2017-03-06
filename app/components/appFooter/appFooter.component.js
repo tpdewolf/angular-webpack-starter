@@ -1,7 +1,7 @@
 import template from './appFooter.html';
 import './appFooter.scss';
 
-let component = {
+const component = {
 	bindings: {},
 	template: template,
 	controller: function() {

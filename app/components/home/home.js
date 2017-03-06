@@ -2,10 +2,9 @@ import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 import template from './home.html'
 import controller from './home.controller'
-import service from './home.service'
 import './home.scss'
 
-let module = angular.module('home', [
+const module = angular.module('home', [
 	uiRouter
 ])
 .config(($stateProvider, $urlRouterProvider) => {
@@ -28,7 +27,6 @@ let module = angular.module('home', [
 			}
 		})
 })
-.service('', service)
 .name;
 
 export default module;

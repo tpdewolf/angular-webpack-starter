@@ -1,11 +1,11 @@
 import template from './app.html';
 
-let component = {
+const component = {
 	template,
 	controller: () => {
 		"ngInject";
 		
-		var vm = this;
+		const vm = this;
 	}
 }
 

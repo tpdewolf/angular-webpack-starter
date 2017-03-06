@@ -1,7 +1,7 @@
-let controller = function() {
+const controller = function() {
 	"ngInject"
 	
-	var vm = this;
+	const vm = this;
 }
 
 export default controller;

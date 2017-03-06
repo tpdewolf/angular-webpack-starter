@@ -1,4 +1,4 @@
-let controller = function() {
+const controller = function() {
 	"ngInject"
 
 	var vm = this; //define the viewmodel

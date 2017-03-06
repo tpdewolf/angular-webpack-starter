@@ -1,4 +1,4 @@
-let module = angular.module('app.filters', [])
+const module = angular.module('app.filters', [])
 .filter('unsafe', ($sce) => {
 	"ngInject";
 	return (val) => $sce.trustAsHtml(val);

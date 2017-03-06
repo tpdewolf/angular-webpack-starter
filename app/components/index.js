@@ -3,7 +3,7 @@ import appFooter from './appFooter/appFooter'
 import home from './home/home'
 import other from './other/other'
 
-let module = angular.module('app.components', [
+const module = angular.module('app.components', [
 	appHeader,
 	appFooter,
 	home,
