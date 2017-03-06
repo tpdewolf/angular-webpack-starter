@@ -5,7 +5,7 @@ import controller from './<%= name %>.controller'
 import service from './<%= name %>.service'
 import './<%= name %>.scss'
 
-let module = angular.module('<%= name %>', [
+const module = angular.module('<%= name %>', [
 	uiRouter
 ])
 .config(($stateProvider) => {

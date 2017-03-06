@@ -1,7 +1,7 @@
 import template from './<%= name %>.html';
 import './<%= name %>.scss';
 
-let component = {
+const component = {
 	bindings: {},
 	template: template,
 	controller: function() {
