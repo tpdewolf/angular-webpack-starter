@@ -1,10 +1,10 @@
 {
-  "name": "Count3r",
-  "version": "4.0.1",
-  "description": "Count3r Mediamarkt",
+  "name": "angular-webpack-starter",
+  "version": "0.0.1",
+  "description": "Starter for Angular with Webpack",
   "scripts": {
     "start": "webpack --progress --colors --watch",
-    "build": "webpack --progress --colors -p && ionic build ios",
+    "build": "webpack --progress --colors",
     "component": "gulp component --name ",
     "page": "gulp page --name "
   },
