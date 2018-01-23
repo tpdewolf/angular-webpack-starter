@@ -12,8 +12,8 @@ const module = angular.module('<%= name %>', [])
 			url: '/<%= name %>',
 			views: {
 				'@': {
-					template: template,
-					controller: controller,
+					template,
+					controller,
 					controllerAs: '$ctrl'
 				}
 			},

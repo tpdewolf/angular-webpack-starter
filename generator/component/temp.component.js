@@ -3,7 +3,7 @@ import './<%= name %>.scss';
 
 const component = {
 	bindings: {},
-	template: template,
+	template,
 	controller: function() {
 		"ngInject"
 
