@@ -1,13 +1,9 @@
 import angular from 'angular';
-import uiRouter from 'angular-ui-router';
 import template from './<%= name %>.html'
 import controller from './<%= name %>.controller'
-import service from './<%= name %>.service'
 import './<%= name %>.scss'
 
-const module = angular.module('<%= name %>', [
-	uiRouter
-])
+const module = angular.module('<%= name %>', [])
 .config(($stateProvider) => {
 	"ngInject";
 
@@ -18,12 +14,11 @@ const module = angular.module('<%= name %>', [
 				'@': {
 					template: template,
 					controller: controller,
-					controllerAs: '<%= name %>'
+					controllerAs: '$ctrl'
 				}
 			},
 		})
 })
-.service('<% upCaseName %>', service)
 .name;
 
 export default module;
