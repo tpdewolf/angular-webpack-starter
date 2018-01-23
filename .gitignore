@@ -2,8 +2,6 @@
 # http://git-scm.com/docs/gitignore
 
 node_modules/
-src/app.css
-src/app.css.map
-src/bundle.js
-src/bundle.js.map
-.DS_Store
+src/app.css*
+src/bundle.js*
+**/*.DS_Store
