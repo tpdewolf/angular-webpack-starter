@@ -4,36 +4,56 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 module.exports = {
-	debug: true,
-	devtool: 'source-map',
-	entry: './app/app.js',
-	output: {
-		path: __dirname+'/www',
-		filename: 'bundle.js'
-	},
-	plugins: [
-		new LiveReloadPlugin(),
-		new ExtractTextPlugin('app.css'),
-	],
-	module: {
-		loaders: [
-			{
-				test: /\.js$/,
-				exclude: [/node_modules/],
-				loader: 'ng-annotate!babel-loader?presets[]=es2015'
-			},
-			{
-				test: /\.html$/,
-				loader: 'raw'
-			},
-			{
-				test: /\.(scss|sass)$/,
-				loader: ExtractTextPlugin.extract('style', 'css!sass')
-			},
-			{
-				test: /\.(eot|svg|ttf|woff|woff2)([?]?.*)$/,
-				loader: 'file-loader?name=fonts-build/[name].[ext]'
-			}
-		]
-	}
+    devtool: 'source-map',
+    entry: './src/app.js',
+    output: {
+        path: __dirname+'/dist',
+        filename: 'bundle.js'
+    },
+    plugins: [
+        new LiveReloadPlugin({
+            ignore: /\.(css|scss|sass)$/ 
+        }),
+        new ExtractTextPlugin('app.css'),
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                exclude: [/node_modules/],
+                use: [
+                    'ng-annotate-loader',
+                    'babel-loader?presets[]=env'
+                ]
+            },
+            {
+                test: /\.html$/,
+                use: [
+                    'raw-loader'
+                ]
+            },
+            {
+                test: /\.(scss|sass)$/,
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: [
+                        "css-loader",
+                        "sass-loader"
+                    ]
+                })
+            },
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)([?]?.*)$/,
+                use: [
+                    'file-loader?name=fonts-build/[name].[ext]'
+                ]
+            },
+            {
+                test: /\.json$/,
+                use: [
+                    'json-loader'
+                ]
+            }
+        ]
+    }
 };
